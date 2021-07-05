@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Gym Kairos</title>
+</head>
+
+<body class="container">
+    <div>
+        <h1 class="text-center text-white bg-dark">Cuotas de alumnos</h1>
+        <form id="formulario" class="container">
+            <span class="input-group-text">#ID del Alumno</span>
+            <input id="id" class="form-control text-center" type="number" placeholder="#ID">
+            <span class="input-group-text">Nombre del Alumno</span>
+            <input id="nombres" class="form-control text-center" type="text" placeholder="Nombre">
+            <span class="input-group-text">Apellido del Alumno</span>
+            <input id="apellidos" class="form-control text-center" type="text" placeholder="Apellido">
+            <span class="input-group-text">Edad del Alumno</span>
+            <input id="edad" class="form-control text-center" type="number" placeholder="Edad">
+            <span class="input-group-text">Monto pagado</span>
+            <input id="monto" class="form-control text-center" type="number" placeholder="$$">
+
+            <button id="btnSaveStudent" type="button"
+                class="btn btn-primary mb-3 form-control text-white bg-dark">Guardar</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2 class="text-center text-white bg-dark">Lista alumnos</h2>
+        <table class="table  table-dark table-hover table-striped container" id="studentTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Monto</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <button id="btnDeleteStudent" type="button" class="btn btn-primary mb-3 form-control text-white bg-dark"
+            value="Actualizar" onclick="location.reload()">Borrar Todo!</button>
+    </div>
+
+
+
+
+
+
+
+ <!-- Script Mios -->
+    <script src="index.js"></script>
+    <script src="archivo.js"></script>
+    <!-- Script Bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

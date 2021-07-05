@@ -3,11 +3,11 @@ dowStudentTable()
 
 
 function saveStudent() {
-    const sId = document.getElementById("id").value,
-        sName = document.getElementById("nombres").value,
-        sSurname = document.getElementById("apellidos").value,
-        sAge = document.getElementById("edad").value,
-        sMoney = document.getElementById("monto").value;
+    const sId = $("#id").val(),
+        sName = $("#nombres").val(),
+        sSurname = $("#apellidos").val(),
+        sAge = $("#edad").val(),
+        sMoney = $("#monto").val();
 
     addStudentToSystem(sId, sName, sSurname, sAge, sMoney);
     dowStudentTable()

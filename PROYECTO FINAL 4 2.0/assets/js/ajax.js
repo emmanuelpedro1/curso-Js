@@ -36,13 +36,13 @@ function buscarML(e) {
 
     function pintarCards(array) {
 
-
+        
 
 
         for (let element of array) {
 
             let div = document.createElement('div');
-
+            
             div.className = 'card row'
 
             div.innerHTML = `
@@ -51,6 +51,7 @@ function buscarML(e) {
             <p class="col order-first" >$${element.precio}</p>`
 
             section.appendChild(div);
+
             //funcion para borrar lo buscado
             function limpiarFormulario() {
                 document.getElementById("miForm").reset();
@@ -60,7 +61,7 @@ function buscarML(e) {
                 limpiarFormulario();
                 div.innerHTML = ""
                 section.removeChild(div);
-
+ 
             })
 
 

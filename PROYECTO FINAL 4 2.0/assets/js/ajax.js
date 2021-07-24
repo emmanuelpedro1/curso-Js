@@ -15,7 +15,7 @@ function buscarML(e) {
                 this.precio = precio
         }
     }
-  
+
     let misDatos = [];
     $.get(urlMl, function (data, status) {
 
@@ -26,27 +26,21 @@ function buscarML(e) {
         pintarCards(misDatos)
     })
 
-    
-     function limpiarFormulario() {
-         document.getElementById("miForm").reset();
-       }
-   
+
 
 
     /////////////////////////////// FUNCTION PARA PINTAR////////////////////////////////////////////////
 
     const section = document.querySelector('.contenedor');
     let deleteBoton = document.getElementById("borrarbusqueda")
-    
-   
-    // section.appendChild(deleteBoton);
+
     function pintarCards(array) {
-        
-        
-         
+
+
+
 
         for (let element of array) {
-           
+
             let div = document.createElement('div');
 
             div.className = 'card row'
@@ -57,19 +51,23 @@ function buscarML(e) {
             <p class="col order-first" >$${element.precio}</p>`
 
             section.appendChild(div);
-            
-            deleteBoton.addEventListener("click", () => { 
+            //funcion para borrar lo buscado
+            function limpiarFormulario() {
+                document.getElementById("miForm").reset();
+            }
+
+            deleteBoton.addEventListener("click", () => {
                 limpiarFormulario();
                 div.innerHTML = ""
                 section.removeChild(div);
-                
-             })
-            
+
+            })
+
 
         }
 
     }
-    
+
 
 }
 

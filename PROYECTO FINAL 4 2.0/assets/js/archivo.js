@@ -1,10 +1,12 @@
-const inputfiltro = document.querySelector("#txtFiltro"); 
+//funciones para el DOM 
+
+const inputfiltro = document.querySelector("#txtFiltro");
 const list = getStudentList();
 dowStudentTable();
 inputfiltro.addEventListener("keyup", dowStudentTable);
 
-function saveStudent(e) {
-    e.preventDefault();
+
+function saveStudent() {
     const sId = $("#id").val(),
         sName = $("#nombres").val(),
         sSurname = $("#apellidos").val(),
@@ -16,38 +18,39 @@ function saveStudent(e) {
 }
 
 function dowStudentTable() {
-  
-     const   tbody = document.querySelector('#studentTable tbody');
-let filtro = inputfiltro.value;
+    const tbody = document.querySelector('#studentTable tbody');
+    let filtro = inputfiltro.value;
     tbody.innerHTML = '';
 
     for (var i = 0; i < list.length; i++) {
 
-        if(list[i].name.toLowerCase().includes(filtro.toLowerCase())){
+        if (list[i].name.toLowerCase().includes(filtro.toLowerCase())) {
             var row = tbody.insertRow();
-        idCell = row.insertCell(0);
-        nameCell = row.insertCell(1);
-        surnameCell = row.insertCell(2);
-        ageCell = row.insertCell(3);
-        moneyCell = row.insertCell(4);
+            idCell = row.insertCell(0);
+            nameCell = row.insertCell(1);
+            surnameCell = row.insertCell(2);
+            ageCell = row.insertCell(3);
+            moneyCell = row.insertCell(4);
+           
 
-        idCell.innerHTML = list[i].id;
-        nameCell.innerHTML = list[i].name;
-        surnameCell.innerHTML = list[i].surname;
-        ageCell.innerHTML = list[i].age;
-        moneyCell.innerHTML = "$" + list[i].money;
+            idCell.innerHTML = list[i].id;
+            nameCell.innerHTML = list[i].name;
+            surnameCell.innerHTML = list[i].surname;
+            ageCell.innerHTML = list[i].age;
+            moneyCell.innerHTML = "$" + list[i].money;
 
-        tbody.appendChild(row);
-       
+            tbody.appendChild(row);
+
+
         }
-        
 
     }
 }
 
-$( "#btnDeleteStudent" ).click(function() {
-    $( "tbody" ).empty();
-    deleteall();
-  });
 
-// $("#btnSaveStudent").on("click", saveStudent);
+
+$("#btnDeleteStudent").click(function () {
+    deleteall();
+    location.reload(true);
+
+});

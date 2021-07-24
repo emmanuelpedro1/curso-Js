@@ -51,4 +51,4 @@ $( "#btnDeleteStudent" ).click(function() {
     deleteall();
   });
 
-$("#btnSaveStudent").on("click", saveStudent);
+// $("#btnSaveStudent").on("click", saveStudent);
